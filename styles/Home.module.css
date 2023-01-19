@@ -1,0 +1,15 @@
+
+.main {
+  display: flex;
+  margin: 1rem 5rem;
+  gap: 1rem;
+  /* min-height: 100vh; */
+  /* width: 100vw; */
+}
+.aside {
+  flex: 3;
+  background-color: #fff;
+}
+.home-container {
+  flex: 9;
+}

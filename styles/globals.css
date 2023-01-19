@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  text-decoration: none;
+  list-style-type: none;
+  transition: all .1s linear;
+}
+:root {
+  --white-color: #fff;
+  --background-color: var(--background-color);
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: #0000001a;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* post container */
+
+.container {
+  background-color: var(--white-color);
+  margin-top: 1rem;
+  height: 100%;
+}
+.post-container {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.post-container .post {
+  width: 18rem;
+  height: 23rem;
+  border-radius: 1rem;
+  margin: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+.info img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 1px solid gray;
+}
+.info p {
+  color: grey;
+  font-size: 0.8rem;
+}
+.online-btn {
+  background-color: greenyellow;
+  padding: 0.2rem 1rem;
+  margin: auto;
+  color: #fff;
+  border-radius: 0.4rem;
+}
+.btn-container {
+  display: flex;
+  justify-content: space-around;
+}
+.btn-container button {
+  color: #fff;
+  padding: 0.3rem 1rem;
+  margin: 0.5rem;
+  border-radius: 1rem;
+  width: 7rem;
+}
+.review .star {
+  color: aqua;
+}
+.view-btn {
+  background-color: aqua;
+}
+.book-btn {
+  background-color: #090979;
+}
+.address {
+  padding: 0 1rem;
+  line-height: 1.2rem;
+}
+.address p {
+  font-size: 0.8rem;
+  color: gray;
+}
+.address h4 {
+  color: gray;
+}
+.address b{
+  font-size: .9rem;
+}
+.add-icon {
+  color: rgb(236, 236, 61);
+  margin-left:-1rem ;
+}
+.btn-container button:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/**=========== post container end  =============*/
+.main {
+  display: flex;
+  margin: 1rem 5rem;
+  gap: 1rem;
+  min-height: 100vh;
+  width: 100vw;
+}
+.aside {
+  flex: 3;
+  background-color: #fff;
+}
+.home-container {
+  flex: 9;
+}
+/** ============== sidebar ==============================*/
+.sidebar-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.sidebar-container img {
+  width: 10rem;
+  border: 2px solid gray;
+  border-radius: 50%;
+}
+nav ul li {
+  font-size: 1.2rem;
+  color: gray;
+  margin: 1rem;
+}
+nav ul li a{
+  color: inherit;
+}
+nav ul li .active{
+  color: aqua;
+}
+nav ul li span {
+  margin-right: 0.2rem;
+}
+nav ul li:hover{
+  cursor: pointer;
+  color: aqua;
+}
+sub{
+  font-size: 0.6rem;
+  color: aqua;
+}
