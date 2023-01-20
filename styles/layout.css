@@ -1,29 +1,32 @@
 header h2 {
-    background-color: #fff;
-    padding: 0.5rem 1rem;
-  }
-  header .search-bar {
-    margin-top: 1rem;
-    display: flex;
-  }
-  .input-box{
-    flex: 1;
-    background-color: #fff; padding: 0.8rem 1rem;
-  }
-  .input-box span .search{
-    text-align: center;
-    color: gray;
-    font-size: 1.2rem;
-    margin-left: .5rem;
-  }
-  .input-box input{
-    padding: 0 1rem;
-    width: 80%;
-    outline: none;
-  }
-  header .search-bar .ser-btn {
-    background-image: linear-gradient(to right, aqua, #090979 60%);
-    padding: 0 0.5rem;
-    color: var(--white-color);
-    cursor: pointer;
-  }
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+}
+header .search-bar {
+  margin-top: 1rem;
+  display: flex;
+}
+.input-box {
+  flex: 1;
+  background-color: #fff;
+  padding: 0.8rem 1rem;
+}
+.input-box span .search {
+  text-align: center;
+  color: gray;
+  font-size: 1.1rem;
+  margin-left: 0.5rem;
+}
+.input-box input {
+  padding: 0 1rem;
+  width: 90%;
+  outline: none;
+  font-size: 1.1rem;
+}
+header .search-bar .ser-btn {
+  background-image: linear-gradient(to left, aqua, #090979 80%);
+  padding: 0 0.5rem;
+  color: var(--white-color);
+  cursor: pointer;
+}
+

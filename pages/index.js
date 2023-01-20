@@ -1,10 +1,12 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
+import HomeLayout from "@/src/components/HomeLayout";
+import axios from "axios";
+const client = axios.create({
+  baseURL: "https://api.soowgood.com",
+});
 
-import Sidebar from "@/components/Sidebar";
-import HomeLayout from "@/components/HomeLayout";
-
-export default function Home() {
+export default function Home({ users }) {
   return (
     <>
       <Head>
@@ -13,10 +15,20 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <Sidebar />
-        <HomeLayout />
-      </main>
+      <>
+        <HomeLayout users={users} />
+      </>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const response = await client.post("/api/Searches/Provider", {
+    UserRole: "Provider",
+  });
+  return {
+    props: {
+      users: response.data,
+    },
+  };
 }

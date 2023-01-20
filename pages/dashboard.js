@@ -1,9 +1,9 @@
 const Dashboard = () => {
   return (
     <>
-      <div className="home-container">
+      <main>
         <h1>Welcome to Dashboard</h1>
-      </div>
+      </main>
     </>
   );
 };
