@@ -1,5 +1,6 @@
-import { AiFillStar, AiFillHome } from "react-icons/ai";
-function Post({ post }) {
+import { AiFillHome } from "react-icons/ai";
+import Star from "./star";
+function Post({ post, showPopup }) {
   return (
     <>
       <div className="post" key={post.clinicId}>
@@ -17,9 +18,7 @@ function Post({ post }) {
               : post.service.slice(0, 15)}
           </p>
           <div className="review">
-            <AiFillStar className="star" />
-            <AiFillStar className="star" />
-            <AiFillStar className="star" />
+            <Star star={post.totalratingpoint} />
             <sub>{post.totalreview} review</sub>
           </div>
         </div>
@@ -37,10 +36,16 @@ function Post({ post }) {
               : post.clinicAddress.slice(0, 55)}
           </p>
         </div>
-        <button className="online-btn">{post.appointmentType}</button>
+        <button
+          className={post.appointmentType === "Online" ? "online" : "clinic"}
+        >
+          {post.appointmentType}
+        </button>
         <div className="btn-container">
           <button className="view-btn">View more</button>
-          <button className="book-btn">Book now</button>
+          <button className="book-btn" onClick={() => showPopup(post)}>
+            Book now
+          </button>
         </div>
       </div>
     </>

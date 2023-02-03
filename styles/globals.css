@@ -14,6 +14,9 @@
   --background-color:#0000001a ;
   --aqua-color:aqua;
   --primary--gray:gray;
+  --primary--btn:#090979;
+  --online--btn:#82CD47;
+  --star--btn:orange;
 }
 
 html,
@@ -21,6 +24,7 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   background-color: var(--background-color);
+  font-size: 16px;
 }
 a {
   color: inherit;
@@ -62,18 +66,24 @@ a {
   height: 5rem;
   object-fit: contain;
   border-radius: 50%;
-  border: 1px solid var(--primary--gray);
+  /* border: 1px solid var(--primary--gray); */
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 5px;
 }
 .info p {
   color: var(--primary--gray);
   font-size: 0.8rem;
 }
-.online-btn {
-  background-color: greenyellow;
+.post button{
   padding: 0.2rem 1rem;
   margin: auto;
   color: var(--white-color);
   border-radius: 0.4rem;
+}
+.online{
+  background-color: var(--online--btn);
+}
+.clinic{
+  background-color:var(--primary--btn);
 }
 .btn-container {
   display: flex;
@@ -87,13 +97,18 @@ a {
   width: 7rem;
 }
 .review .star {
-  color: var(--aqua-color);
+  color: var(--star--btn);
+  font-size: .8rem;
+}
+sub{
+  font-size: 0.6rem;
+  color: var(--star--btn);
 }
 .view-btn {
   background-color: var(--aqua-color);
 }
 .book-btn {
-  background-color: #090979;
+  background-color: var(--primary--btn);
 }
 .address {
   padding: 0 1rem;
@@ -110,8 +125,9 @@ a {
   font-size: .9rem;
 }
 .add-icon {
-  color: rgb(236, 236, 61);
+  color: var(--star--btn);
   margin-left:-1rem ;
+  font-size: 1.2rem;
 }
 .btn-container button:hover{
   transform: scale(1.1);
@@ -163,7 +179,68 @@ nav ul li:hover{
   cursor: pointer;
   color:var(--aqua-color);
 }
-sub{
-  font-size: 0.6rem;
-  color: var(--aqua-color);
+
+/** ========== popup ========= */
+.popup-container{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 999;
+  
+}
+.popup-container .modelContainer{
+  padding: 1rem;
+  max-width: 22rem;
+  height: 25rem;
+  background-color: var(--white-color);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: .5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+} 
+.popup-container .modelContainer img{
+  width: 6rem;
+  height: 6rem;
+  object-fit: contain;
+  border-radius: 50%;
+  object-fit: contain;
+  position: absolute;
+  top: -3.5rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+}
+.popup-btn button{
+  color: var(--white-color);
+  padding: .5rem;
+  cursor: pointer;
+  margin: 1rem;
+  border-radius: .5rem;
+  width: 5rem;
+}
+.can-btn{
+  background-color: red;
+}
+.cont-btn{
+  background-color: var(--aqua-color);
+}
+.popup-container .modelContainer .body p span{
+ color: gray;
+}
+.body p b{
+  display: inline-block;
+  width: 8rem; 
+}
+
+@media screen and (max-width: 992px) {
+ .main {
+  margin: 1rem auto;
+}
+}
+@media screen and (max-width: 600px) {
+ html{
+  font-size: 14px;
+ }
+
 }
